@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pokemon API</title>
+    <!-- <link rel="stylesheet" href="style1.css"> -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        
+        
+        $(document).ready(function(){
+            var i = 0
+            var text= $("");
+            if (i < 152) {
+                text = Math.floor(Math.random() * Math.floor(152));     //trying to make it load a new image with each click, sadly i am spending to much time with this project.
+                i++;
+            }
+            $("button").click(function(){
+                $(`<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${text}.png">`).appendTo(`.container`) 
+                + $('button').val(text) + '.container'
+            })
+
+        })
+</script>
+</head>
+<body>
+    <div class="container">
+        <button>Click for a new pokemon</button>
+    </div>
+</body>
+</html>
